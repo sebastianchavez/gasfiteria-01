@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios | AquaPro - Gasfitería profesional</title>
+<meta name="description" content="Todos los servicios de gasfitería: destape de cañerías, reparación de fugas, instalación, mantención, gasfitería industrial y más.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50">
+
+<div id="nav-container"></div>
+
+<!-- HERO -->
+<section class="bg-hero text-white relative overflow-hidden py-20 md:py-28">
+  <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <circle cx="80" cy="30" r="30" fill="white"/>
+      <circle cx="20" cy="70" r="25" fill="white"/>
+    </svg>
+  </div>
+  <div class="container-page relative z-10">
+    <nav class="flex items-center gap-2 text-sm text-blue-200 mb-6" data-reveal>
+      <a href="index.html" class="hover:text-white">Inicio</a>
+      <span>/</span>
+      <span class="text-white">Servicios</span>
+    </nav>
+    <div class="max-w-4xl" data-anim="fade-in-up">
+      <span class="badge bg-orange-500/20 text-orange-300">Nuestros servicios</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
+        Soluciones integrales<br>
+        <span class="text-orange-400">de gasfitería</span>
+      </h1>
+      <p class="text-xl text-blue-100 leading-relaxed">
+        Cubrimos todas las necesidades hidráulicas de tu hogar, comercio o industria. Servicios residenciales, comerciales e industriales con garantía escrita.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS GRID -->
+<section class="section bg-slate-50">
+  <div class="container-page">
+    <div class="text-center mb-12" data-anim="fade-in-up">
+      <span class="badge">10 servicios especializados</span>
+      <h2 class="section-title mt-4">¿En qué podemos ayudarte?</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicios-grid"></div>
+  </div>
+</section>
+
+<!-- TIPOS DE SERVICIO -->
+<section class="section bg-white">
+  <div class="container-page">
+    <div class="text-center mb-12" data-anim="fade-in-up">
+      <span class="badge">Cobertura</span>
+      <h2 class="section-title mt-4">Atendemos todo tipo de clientes</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card p-8 hover:bg-blue-700 hover:text-white transition-all duration-300 group" data-anim="fade-in-up">
+        <div class="w-16 h-16 rounded-2xl bg-blue-100 group-hover:bg-white/20 text-blue-700 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Residencial</h3>
+        <p class="text-slate-600 group-hover:text-blue-100 mb-4">Casas, departamentos y condominios. Soluciones para todas las marcas y modelos de artefactos sanitarios.</p>
+        <ul class="space-y-2 text-sm">
+          <li>• Reparaciones a domicilio</li>
+          <li>• Mantención preventiva</li>
+          <li>• Instalación de artefactos</li>
+          <li>• Emergencias 24/7</li>
+        </ul>
+      </div>
+      <div class="card p-8 hover:bg-orange-500 hover:text-white transition-all duration-300 group" data-anim="fade-in-up anim-delay-200">
+        <div class="w-16 h-16 rounded-2xl bg-orange-100 group-hover:bg-white/20 text-orange-500 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Comercial</h3>
+        <p class="text-slate-600 group-hover:text-orange-100 mb-4">Restaurantes, oficinas, locales y edificios. Atendemos sin interrumpir tu operación.</p>
+        <ul class="space-y-2 text-sm">
+          <li>• Mantención programada</li>
+          <li>• Trabajos fuera de horario</li>
+          <li>• Certificación de redes</li>
+          <li>• Reportes ejecutivos</li>
+        </ul>
+      </div>
+      <div class="card p-8 hover:bg-blue-700 hover:text-white transition-all duration-300 group" data-anim="fade-in-up anim-delay-400">
+        <div class="w-16 h-16 rounded-2xl bg-blue-100 group-hover:bg-white/20 text-blue-700 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Industrial</h3>
+        <p class="text-slate-600 group-hover:text-blue-100 mb-4">Plantas de proceso, fábricas con proyectos llave en mano y contratos de mantención.</p>
+        <ul class="space-y-2 text-sm">
+          <li>• Proyectos llave en mano</li>
+          <li>• Redes contra incendio</li>
+          <li>• Plantas de tratamiento</li>
+          <li>• Gerencia de proyectos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section bg-slate-50">
+  <div class="container-page">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-anim="fade-in-left">
+        <span class="badge">Cómo trabajamos</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 mb-6">4 pasos para resolver tu problema</h2>
+        <p class="text-lg text-slate-600 mb-8">Un proceso transparente y profesional, desde el diagnóstico hasta la garantía post-servicio.</p>
+        <div id="proceso-steps"></div>
+      </div>
+      <div class="relative" data-anim="fade-in-right">
+        <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://picsum.photos/seed/servicioequipo/800/800" alt="Equipo trabajando" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -top-6 -right-6 bg-orange-500 text-white p-6 rounded-2xl shadow-2xl max-w-xs">
+          <p class="text-3xl font-extrabold">+12.500</p>
+          <p class="text-sm">clientes confían en nosotros</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="section bg-white">
+  <div class="container-page">
+    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-12 text-center" data-anim="fade-in-up">
+      <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-700 text-white flex items-center justify-center">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Garantía escrita en cada trabajo</h2>
+      <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-8">
+        Respaldamos nuestros servicios con garantía escrita de 6 meses en mano de obra, extensible a 12 meses en nuestros contratos corporativos. Si algo no quedó bien, volvemos sin costo.
+      </p>
+      <a href="contacto.html" class="btn-primary">Solicitar presupuesto gratis</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section bg-orange-500 text-white">
+  <div class="container-page text-center" data-anim="scale-in">
+    <h2 class="text-3xl md:text-5xl font-extrabold mb-6">¿Necesitas un servicio?</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">Te respondemos en menos de 2 horas con un presupuesto sin compromiso.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contacto.html" class="bg-white text-orange-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors shadow-lg">Cotizar servicio</a>
+      <a href="tel:+56912345678" class="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-500 transition-colors">📞 Llamar ya</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

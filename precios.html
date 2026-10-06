@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precios | AquaPro - Planes y tarifas</title>
+<meta name="description" content="Conoce nuestros planes de mantención y precios de servicios individuales. Cotiza tu presupuesto en línea.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50">
+
+<div id="nav-container"></div>
+
+<!-- HERO -->
+<section class="bg-hero text-white relative overflow-hidden py-20 md:py-28">
+  <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="0.5"/>
+      <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="0.5"/>
+    </svg>
+  </div>
+  <div class="container-page relative z-10">
+    <nav class="flex items-center gap-2 text-sm text-blue-200 mb-6" data-reveal>
+      <a href="index.html" class="hover:text-white">Inicio</a>
+      <span>/</span>
+      <span class="text-white">Precios</span>
+    </nav>
+    <div class="max-w-4xl" data-anim="fade-in-up">
+      <span class="badge bg-orange-500/20 text-orange-300">Planes y tarifas</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
+        Precios justos,<br>
+        <span class="text-orange-400">transparentes</span>
+      </h1>
+      <p class="text-xl text-blue-100 leading-relaxed">
+        Sin sorpresas ni letra pequeña. Conoce nuestras tarifas y elige el plan que mejor se ajuste a tus necesidades.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section class="section bg-slate-50">
+  <div class="container-page">
+    <div class="text-center mb-12" data-anim="fade-in-up">
+      <span class="badge">Planes mensuales</span>
+      <h2 class="section-title mt-4">Mantención sin preocupaciones</h2>
+      <p class="section-subtitle">Elige el plan que mejor se ajusta a ti. Todos incluyen atención prioritaria.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="planes-grid"></div>
+  </div>
+</section>
+
+<!-- LISTA DE PRECIOS -->
+<section class="section bg-white">
+  <div class="container-page">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div data-anim="fade-in-left">
+        <span class="badge">Servicios individuales</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 mb-6">Tarifas por servicio</h2>
+        <p class="text-slate-600 mb-8">Precios referenciales. El valor final se establece tras la visita técnica.</p>
+        <div id="precios-list" class="space-y-2"></div>
+      </div>
+      <div data-anim="fade-in-right">
+        <div class="bg-gradient-to-br from-blue-50 to-orange-50 rounded-3xl p-8 shadow-lg">
+          <span class="badge">Calculadora</span>
+          <h2 class="text-2xl font-extrabold text-slate-900 mt-4 mb-2">Calcula tu presupuesto</h2>
+          <p class="text-slate-600 mb-6 text-sm">Referencia rápida. La cotización formal se hace tras visita técnica.</p>
+          <form id="calculadora-form" class="space-y-4">
+            <div>
+              <label class="label-field">Tipo de servicio</label>
+              <select name="tipo" class="input-field" required>
+                <option value="destape">Destape de cañerías</option>
+                <option value="fuga">Reparación de fuga</option>
+                <option value="instalacion">Instalación de artefacto</option>
+                <option value="terma">Mantención de terma</option>
+                <option value="bomba">Instalación de bomba</option>
+                <option value="deteccion">Detección de filtración</option>
+                <option value="industrial">Gasfitería industrial</option>
+                <option value="mantenimiento">Mantención preventiva</option>
+                <option value="tuberia">Instalación de cañería</option>
+                <option value="limpieza">Limpieza alcantarillado</option>
+              </select>
+            </div>
+            <div>
+              <label class="label-field">Urgencia</label>
+              <select name="urgencia" class="input-field" required>
+                <option value="1">Normal (3-5 días)</option>
+                <option value="1.3">Urgente (24 horas)</option>
+                <option value="1.6">Emergencia (inmediato)</option>
+              </select>
+            </div>
+            <div>
+              <label class="label-field">Cantidad / Metros lineales</label>
+              <input type="number" name="metros" min="1" value="1" class="input-field" required>
+            </div>
+            <button type="submit" class="btn-primary w-full">Calcular presupuesto</button>
+          </form>
+          <div id="calc-result" class="mt-6 hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section bg-slate-50">
+  <div class="container-page max-w-4xl">
+    <div class="text-center mb-12" data-anim="fade-in-up">
+      <span class="badge">Preguntas frecuentes</span>
+      <h2 class="section-title mt-4">Resolvemos tus dudas</h2>
+    </div>
+    <div class="space-y-4" id="faq-container">
+      <!-- Renderizado por JS -->
+    </div>
+  </div>
+</section>
+
+<!-- MEDIOS DE PAGO -->
+<section class="section bg-white">
+  <div class="container-page">
+    <div class="text-center mb-12" data-anim="fade-in-up">
+      <span class="badge">Medios de pago</span>
+      <h2 class="section-title mt-4">Paga como prefieras</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
+      <div class="card p-6 text-center hover:bg-blue-50" data-anim="scale-in">
+        <div class="text-4xl mb-2">💵</div>
+        <p class="font-bold text-sm text-slate-700">Efectivo</p>
+      </div>
+      <div class="card p-6 text-center hover:bg-blue-50" data-anim="scale-in anim-delay-100">
+        <div class="text-4xl mb-2">💳</div>
+        <p class="font-bold text-sm text-slate-700">Tarjeta</p>
+      </div>
+      <div class="card p-6 text-center hover:bg-blue-50" data-anim="scale-in anim-delay-200">
+        <div class="text-4xl mb-2">🏦</div>
+        <p class="font-bold text-sm text-slate-700">Transferencia</p>
+      </div>
+      <div class="card p-6 text-center hover:bg-blue-50" data-anim="scale-in anim-delay-300">
+        <div class="text-4xl mb-2">📱</div>
+        <p class="font-bold text-sm text-slate-700">Webpay</p>
+      </div>
+      <div class="card p-6 text-center hover:bg-blue-50" data-anim="scale-in anim-delay-400">
+        <div class="text-4xl mb-2">🧾</div>
+        <p class="font-bold text-sm text-slate-700">Cheque</p>
+      </div>
+      <div class="card p-6 text-center hover:bg-blue-50" data-anim="scale-in anim-delay-500">
+        <div class="text-4xl mb-2">📊</div>
+        <p class="font-bold text-sm text-slate-700">Crédito</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section bg-orange-500 text-white">
+  <div class="container-page text-center" data-anim="scale-in">
+    <h2 class="text-3xl md:text-5xl font-extrabold mb-6">¿Listo para empezar?</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">Contrata tu plan o solicita un servicio. Estamos para ayudarte.</p>
+    <a href="contacto.html" class="bg-white text-orange-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors shadow-lg">Contactar ahora</a>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const data = window.APP_DATA;
+  const container = document.getElementById('faq-container');
+  if (container && data) {
+    container.innerHTML = data.FAQ.map((f, i) => `
+      <div class="faq-item card overflow-hidden" data-anim="fade-in-up" style="animation-delay:${i * 0.05}s" data-counter-observe>
+        <button class="faq-toggle w-full p-6 flex items-center justify-between text-left hover:bg-blue-50 transition-colors">
+          <span class="font-bold text-slate-900 pr-4">${f.pregunta}</span>
+          <span class="faq-icon text-2xl text-orange-500 flex-shrink-0">+</span>
+        </button>
+        <div class="faq-answer px-6">
+          <p class="text-slate-600 leading-relaxed">${f.respuesta}</p>
+        </div>
+      </div>
+    `).join('');
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.faq-item').classList.toggle('open');
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>

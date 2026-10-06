@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia | AquaPro - Cursos y horarios</title>
+<meta name="description" content="Academia AquaPro: cursos de gasfitería básica, intermedia y avanzada. Aprende un oficio con alta demanda laboral.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50">
+
+<div id="nav-container"></div>
+
+<!-- HERO -->
+<section class="bg-hero text-white relative overflow-hidden py-20 md:py-28">
+  <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <polygon points="0,0 100,0 50,100" fill="white"/>
+    </svg>
+  </div>
+  <div class="container-page relative z-10">
+    <nav class="flex items-center gap-2 text-sm text-blue-200 mb-6" data-reveal>
+      <a href="index.html" class="hover:text-white">Inicio</a>
+      <span>/</span>
+      <span class="text-white">Academia</span>
+    </nav>
+    <div class="max-w-4xl" data-anim="fade-in-up">
+      <span class="badge bg-orange-500/20 text-orange-300">🎓 Academia AquaPro</span>
+      <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight">
+        Conviértete en<br>
+        <span class="text-orange-400">gasfiter profesional</span>
+      </h1>
+      <p class="text-xl text-blue-100 leading-relaxed mb-8">
+        Aprende un oficio con alta demanda laboral y excelentes ingresos. Cursos teórico-prácticos con certificación oficial y bolsa de empleo.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#cursos" class="btn-accent">Ver cursos</a>
+        <a href="contacto.html" class="btn-outline bg-white/10 backdrop-blur-md border-white text-white hover:bg-white hover:text-blue-700">Solicitar información</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS ACADEMIA -->
+<section class="py-12 bg-white border-b border-slate-200">
+  <div class="container-page">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div data-anim="scale-in"><p class="text-4xl font-extrabold text-blue-700">450+</p><p class="text-slate-600 text-sm mt-1">Alumnos formados</p></div>
+      <div data-anim="scale-in anim-delay-100"><p class="text-4xl font-extrabold text-blue-700">85%</p><p class="text-slate-600 text-sm mt-1">Tasa de empleabilidad</p></div>
+      <div data-anim="scale-in anim-delay-200"><p class="text-4xl font-extrabold text-blue-700">3</p><p class="text-slate-600 text-sm mt-1">Niveles de formación</p></div>
+      <div data-anim="scale-in anim-delay-300"><p class="text-4xl font-extrabold text-blue-700">12</p><p class="text-slate-600 text-sm mt-1">Años enseñando</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSOS -->
+<section id="cursos" class="section bg-slate-50">
+  <div class="container-page">
+    <div class="text-center mb-12" data-anim="fade-in-up">
+      <span class="badge">Nuestros cursos</span>
+      <h2 class="section-title mt-4">Tres niveles para tu crecimiento</h2>
+      <p class="section-subtitle">Desde cero hasta profesional certificado. Cada nivel te acerca a tu independencia laboral.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8" id="cursos-grid"></div>
+  </div>
+</section>
+
+<!-- HORARIO -->
+<section class="section bg-white">
+  <div class="container-page">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div data-anim="fade-in-left">
+        <span class="badge">Horarios</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 mb-6">Horarios semanales</h2>
+        <p class="text-slate-600 mb-8">Elige el horario que mejor se adapte a tu rutina. Cupos limitados por nivel.</p>
+        <div id="horarios-clases-table"></div>
+        <div class="mt-6 bg-blue-50 border-l-4 border-blue-700 p-4 rounded">
+          <p class="text-sm text-slate-700"><strong class="text-blue-700">Importante:</strong> Las clases se imparten en nuestra sede principal. Incluye coffee break y materiales de práctica.</p>
+        </div>
+      </div>
+      <div data-anim="fade-in-right">
+        <span class="badge">Beneficios</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-4 mb-6">¿Por qué estudiar con nosotros?</h2>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 card p-5">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Certificación oficial</h3>
+              <p class="text-sm text-slate-600">Diploma con validez curricular y respaldo de la SEC.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 card p-5">
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-500 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Bolsa de empleo</h3>
+              <p class="text-sm text-slate-600">Acceso a nuestra red de empresas asociadas al egresar.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 card p-5">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Material incluido</h3>
+              <p class="text-sm text-slate-600">Manuales, herramientas básicas y materiales para prácticas.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 card p-5">
+            <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-500 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-900 mb-1">Grupos reducidos</h3>
+              <p class="text-sm text-slate-600">Máximo 12 alumnos por curso. Atención personalizada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTORES -->
+<section id="instructores" class="section bg-slate-50">
+  <div class="container-page">
+    <div class="text-center mb-12" data-anim="fade-in-up">
+      <span class="badge">Instructores</span>
+      <h2 class="section-title mt-4">Aprende de los mejores</h2>
+      <p class="section-subtitle">Profesionales con décadas de experiencia en terreno y formación pedagógica.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card overflow-hidden" data-anim="fade-in-up">
+        <div class="aspect-square"><img src="https://i.pravatar.cc/400?img=33" alt="" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Miguel Torres</h3>
+          <p class="text-orange-500 font-semibold text-sm mb-3">Instructor Senior</p>
+          <p class="text-slate-600 text-sm">Maestro gasfiter con 15+ años de experiencia. Especialista en gasfitería industrial y SEC.</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden" data-anim="fade-in-up anim-delay-200">
+        <div class="aspect-square"><img src="https://i.pravatar.cc/400?img=45" alt="" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Laura Silva</h3>
+          <p class="text-orange-500 font-semibold text-sm mb-3">Instructora Academia</p>
+          <p class="text-slate-600 text-sm">Docente certificada, formadora de nuevas generaciones con técnicas pedagógicas modernas.</p>
+        </div>
+      </div>
+      <div class="card overflow-hidden" data-anim="fade-in-up anim-delay-400">
+        <div class="aspect-square"><img src="https://i.pravatar.cc/400?img=68" alt="" class="w-full h-full object-cover"></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-slate-900">Roberto Díaz</h3>
+          <p class="text-orange-500 font-semibold text-sm mb-3">Especialista Industrial</p>
+          <p class="text-slate-600 text-sm">Experto en proyectos industriales, plantas de tratamiento y redes de gran envergadura.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSCRIPCION -->
+<section class="section bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+  <div class="container-page">
+    <div class="max-w-3xl mx-auto text-center" data-anim="scale-in">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Inscríbete ahora</h2>
+      <p class="text-xl mb-8 text-orange-100">Completa el formulario y un asesor te contactará en menos de 24 horas.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <a href="contacto.html?form=academia" class="bg-white text-orange-500 px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-100 transition-colors shadow-lg">Inscribirme</a>
+        <a href="tel:+56912345678" class="border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-orange-500 transition-colors">📞 Llamar</a>
+      </div>
+      <p class="mt-6 text-sm text-orange-100">💳 Aceptamos pago en cuotas. Becas disponibles para destacados.</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
